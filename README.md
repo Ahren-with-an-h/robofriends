@@ -1,7 +1,7 @@
 # RoboFriends - The only friends you'll ever need!
 Robofriends features cards that display dynamically and are searchable.
 
-![screenshot](screenshot1.png)
+![screenshot](screenshot.png)
 
 ## Project info
 

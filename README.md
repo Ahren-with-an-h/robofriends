@@ -1,6 +1,8 @@
 # RoboFriends - The only friends you'll ever need!
 Robofriends features cards for users that display dynamically and are searchable.
 
+[screenshot](screenshot1.png)
+
 ## Project info
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

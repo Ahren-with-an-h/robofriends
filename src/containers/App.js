@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 import Scroll from '../components/Scroll';
 import CardList from '../components/CardList';
@@ -16,7 +16,7 @@ class App extends Component {
 	componentDidMount() {
 		fetch('https://jsonplaceholder.typicode.com/users')
 			.then(response => response.json())
-			.then(users => this.setState({ robots: users}));
+			.then(users => this.setState({ robots: users }));
 	}
 
 	onSearchChange = (event) => {
@@ -31,13 +31,17 @@ class App extends Component {
 		return !robots.length ?
 		 <h1 className='f1'>Loading</h1> :
 			(
-				<main className='tc'>
-					<h1 className='f1'>RoboFriends</h1>
-					<SearchBox searchChange={this.onSearchChange}/>
-					<Scroll>
-						<CardList robots={filteredRobots} />
-					</Scroll>
-				</main>
+				<Fragment>
+					<header className='flex justify-center'> 
+						<h1 className='f1 mh4'>RoboFriends</h1>
+						<SearchBox searchChange={this.onSearchChange}/>
+					</header>
+					<main>
+						<Scroll>
+							<CardList robots={ filteredRobots } />
+						</Scroll>
+					</main>
+				</Fragment>
 			)
 	}
 }

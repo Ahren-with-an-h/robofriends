@@ -1,15 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 const SearchBox = ({searchChange}) => {
 	return (
-		<Fragment>
+		<div className='flex flex-column-reverse'>
 			<input 
-				className='pa3 ba b--green bg-lightest-blue'
+				className='mv2 mh2 pa3 ba b--green bg-lightest-blue'
 				type='search' 
 				placeholder='search robots' 
 				onChange={searchChange}
 			/>
-		</Fragment>
+		</div>
 	);
 }
 

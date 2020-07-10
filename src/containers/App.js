@@ -3,6 +3,7 @@ import './App.css';
 import Scroll from '../components/Scroll';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
+import ErrorBoundry from '../components/ErrorBoundry';
 
 class App extends Component {
 	constructor() {
@@ -38,7 +39,9 @@ class App extends Component {
 					</header>
 					<main className='tc'>
 						<Scroll>
-							<CardList robots={ filteredRobots } />
+							<ErrorBoundry>
+								<CardList robots={ filteredRobots } />
+							</ErrorBoundry>
 						</Scroll>
 					</main>
 				</Fragment>
